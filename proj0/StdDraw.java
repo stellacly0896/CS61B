@@ -296,7 +296,7 @@ import javax.swing.KeyStroke;
  *  or rescale it to fit snugly inside a width-by-height bounding box.
  *  <p>
  *  <b>Saving to a file.</b>
- *  You save your image to a file using the <em>File → Save</em> menu option.
+ *  You save your image to a file using the <em>File  Save</em> menu option.
  *  You can also save a file programatically using the following method:
  *  <ul>
  *  <li> {@link #save(String filename)}
@@ -1290,7 +1290,6 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
 /*
     private static BufferedImage getImage(String filename) {
         if (filename == null) throw new IllegalArgumentException();
-
         // from a file or URL
         try {
             URL url = new URL(filename);
@@ -1300,7 +1299,6 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         catch (IOException e) {
             // ignore
         }
-
         // in case file is inside a .jar (classpath relative to StdDraw)
         try {
             URL url = StdDraw.class.getResource(filename);
@@ -1310,7 +1308,6 @@ public final class StdDraw implements ActionListener, MouseListener, MouseMotion
         catch (IOException e) {
             // ignore
         }
-
         // in case file is inside a .jar (classpath relative to root of jar)
         try {
             URL url = StdDraw.class.getResource("/" + filename);

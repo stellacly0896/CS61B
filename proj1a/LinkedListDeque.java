@@ -128,15 +128,16 @@ public class LinkedListDeque <T> {
             return recursionHelper(n.next,index-1);
         }
     }
+    /**
     public static void main(String[] args) {
         LinkedListDeque<Integer> test = new LinkedListDeque<>();
 
-        /**
+
         System.out.println(test.isEmpty());
         System.out.println(test.size());
         System.out.println(test.removedLast());
         System.out.println(test.removeFirst());
-        test.printDeque(); **/
+        test.printDeque();
 
         test.addFirst(1);
         test.addLast(2);
@@ -149,6 +150,7 @@ public class LinkedListDeque <T> {
         System.out.println(test.getRecursion(2));
 
     }
+    **/
 }
 
 

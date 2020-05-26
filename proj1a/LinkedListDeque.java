@@ -1,4 +1,4 @@
-public class LinkedListDeque <T> {
+public class LinkedListDeque < T > {
     private class Node {
         private Node prev;
         private T item;
@@ -25,7 +25,7 @@ public class LinkedListDeque <T> {
     //Adds an item of type T to the front of the deque.
     public void addFirst(T item) {
         if (this.isEmpty()) {
-            Node newFirst = new Node(sentinel,item,sentinel);
+            Node newFirst = new Node(sentinel, item, sentinel);
             sentinel.prev = newFirst;
             sentinel.next = newFirst;
         } else {
@@ -35,17 +35,17 @@ public class LinkedListDeque <T> {
             oldFirst.prev = newFirst;
         }
         size += 1;
-        }
+    }
 
     //Adds an item of type T to the end of the deque.
     public void addLast(T item) {
         if (this.isEmpty()) {
-            Node newLast = new Node(sentinel,item,sentinel);
+            Node newLast = new Node(sentinel, item, sentinel);
             sentinel.prev = newLast;
             sentinel.next = newLast;
         } else {
             Node oldLast = sentinel.prev;
-            Node newLast = new Node(oldLast,item,sentinel);
+            Node newLast = new Node(oldLast, item, sentinel);
             sentinel.prev = newLast;
             oldLast.next = newLast;
         }
@@ -99,7 +99,8 @@ public class LinkedListDeque <T> {
 
         }
     }
-    //Gets the item at the given index, where 0 is the front, 1 is the next item, and so forth. If no such item exists, returns null. Must not alter the deque!
+    //Gets the item at the given index, where 0 is the front, 1 is the next item,
+    // and so forth. If no such item exists, returns null. Must not alter the deque!
     public T get(int index) {
         if (index > this.size) {
             return null;
@@ -117,15 +118,15 @@ public class LinkedListDeque <T> {
         if (index > this.size) {
             return null;
         } else {
-            return recursionHelper(sentinel.next,index);
+            return recursionHelper(sentinel.next , index);
             }
         }
 
-    private T recursionHelper(Node n, int index) {
-        if (index==0) {
+    private T recursionHelper(Node n , int index) {
+        if (index == 0) {
             return n.item;
         } else {
-            return recursionHelper(n.next,index-1);
+            return recursionHelper(n.next, index - 1);
         }
     }
     /**

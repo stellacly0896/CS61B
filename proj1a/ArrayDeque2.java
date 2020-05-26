@@ -82,8 +82,8 @@ public class ArrayDeque < T > {
             resize(items.length / 2);
         }
 
-        T firstItem = items[nextFirst];
-        items[nextFirst] = null;
+        T firstItem = items[nextFirst + 1];
+        items[nextFirst + 1] = null;
         if (nextFirst == items.length - 1) {
             nextFirst = 0;
         } else {
@@ -99,8 +99,8 @@ public class ArrayDeque < T > {
         if (this.isEmpty()) {
             return null;
         }
-        T lastItem = items[nextLast];
-        items[nextLast] = null;
+        T lastItem = items[nextLast - 1];
+        items[nextLast - 1] = null;
         if (nextLast == 0) {
             nextLast = items.length - 1;
         } else {
